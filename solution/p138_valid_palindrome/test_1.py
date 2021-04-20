@@ -19,5 +19,6 @@ def test_1():
     printTest(Solution1(), "1_1")
     printTest(Solution2(), "1_2")
     printTest(Solution3(), "1_3")
+    print()
 
 test_1()
