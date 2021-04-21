@@ -1,4 +1,4 @@
-# 유효한 팰린드롬
+# 1번: 유효한 팰린드롬
 
 https://leetcode.com/problems/valid-palindrome/
 

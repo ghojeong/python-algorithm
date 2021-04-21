@@ -1,4 +1,4 @@
-# 문자열 뒤집기
+# 2번: 문자열 뒤집기
 
 https://leetcode.com/problems/reverse-string/
 
