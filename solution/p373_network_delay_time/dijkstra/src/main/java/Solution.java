@@ -17,19 +17,15 @@ class Solution {
     }
 
     public int networkDelayTime(int[][] times, int n, int k) {
-        k--;
-
         Map<Integer, List<Edge>> graph = new HashMap<>();
         for (int[] arr : times) {
-            int u = arr[0] - 1;
-            int v = arr[1] - 1;
+            int u = arr[0];
+            int v = arr[1];
             int w = arr[2];
-            List<Edge> edges = graph.get(u);
-            if (edges == null) { // FIXME: getOrDefault 로 최적화 필요
-                edges = new ArrayList<>();
-                graph.put(u, edges);
+            if (!graph.containsKey(u)) {
+                graph.put(u, new ArrayList<>());
             }
-            edges.add(new Edge(w, v));
+            graph.get(u).add(new Edge(w, v));
         }
 
         PriorityQueue<Edge> queue = new PriorityQueue<>();
@@ -42,11 +38,10 @@ class Solution {
             int node = e.node;
             if (!dist.containsKey(node)) {
                 dist.put(node, time);
-                List<Edge> edges = graph.get(node);
-                if (edges == null) {
+                if (!graph.containsKey(node)) {
                     continue;
                 }
-                for (Edge edge : edges) {
+                for (Edge edge : graph.get(node)) {
                     int alt = time + edge.time;
                     queue.add(new Edge(alt, edge.node));
                 }
