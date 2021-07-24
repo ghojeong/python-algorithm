@@ -32,6 +32,19 @@ class Solution:
             l1.next = self.mergeTwoLists(l1.next, l2)
         return l1
 
+    def mergeTwoLists2(self, l1: ListNode, l2: ListNode) -> ListNode:
+        node = ListNode()
+        head = node
+        while l1 or l2:
+            if (not l2) or (l1 and l1.val < l2.val):
+                node.next = ListNode(l1.val)
+                l1 = l1.next
+            else:
+                node.next = ListNode(l2.val)
+                l2 = l2.next
+            node = node.next
+        return head.next
+
 
 
 sol = Solution()
