@@ -1,5 +1,7 @@
 # [파이썬 알고리즘 인터뷰](https://github.com/onlybooks/algorithm-interview)
 
+[프로그래머스](https://programmers.co.kr/learn/challenges?tab=sql_practice_kit)
+
 | 번호 | 제목 | 난이도 | 장 | 풀이 코드 |
 | --- | --- | ---- | - | --- |
 | 1 | [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) | ★ | 6장. 문자열 조작 | [1-1.py](src/2-python/ch06/1-1.py)<br>[1-2.py](src/2-python/ch06/1-2.py)<br>[1-3.py](src/2-python/ch06/1-3.py)<br>[1-4.c](src/2-python/ch06/1-4.c) |
